@@ -1,9 +1,15 @@
 #include <stdio.h>
 
-/*  C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line */
-
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+    /* Use puts to print the specified string */
+    puts("Programming is like building a multilingual puzzle");
+
+    return (0);
 }
+
