@@ -1,20 +1,26 @@
-int main()
-{
-	int n;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-	srand(time(NULL));
+int main(void) {
+    int n;
 
-	n = rand();
+    // Seed for the random number generator
+    srand(time(NULL));
 
-	printf("The number is %d", n);
+    // Generate a random number between INT_MIN and INT_MAX
+    n = rand();
 
-	if (n > 0)
-	{ printf("is positive\n"); }
+    printf("The number %d ", n);
 
-	else if (n == 0)
-	{ printf("is zero\n") }
-	else 
-	{ printf("is negative\n") }
+    if (n > 0) {
+        printf("is positive\n");
+    } else if (n == 0) {
+        printf("is zero\n");
+    } else {
+        printf("is negative\n");
+    }
 
-	return (0);
+    return 0;
 }
+
