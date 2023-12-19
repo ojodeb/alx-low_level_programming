@@ -1,1 +1,1 @@
-Readme for C hellow world assignment
+C Hello world project directory
