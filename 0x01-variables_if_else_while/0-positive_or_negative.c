@@ -12,7 +12,7 @@ int main(void)
 {
 	int n;
 /* Seed for the random number generator */
-	srand(time(NULL))
+	srand(time(NULL));
 
 /* Generate a random number between -100 and 100 */
 	n = rand() % 201 - 100;
