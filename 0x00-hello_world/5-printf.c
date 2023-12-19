@@ -1,7 +1,12 @@
 #include <stdio.h>
 
-/* C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line */
-/* Use printf */
+/**
+ * main - Entry point of the program
+ *
+ * Description: This function prints the sizes of various data types
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
