@@ -1,9 +1,9 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Determines if a number is positive, negative or zero.
  *
  * Return: Always 0 (Success)
  */
@@ -11,19 +11,20 @@ int main(void)
 {
 	int n;
 
-	/* Seed for the random number generator */
-	srand(time(NULL));
-
-	/* Generate a random number between -100 and 100 */
-	n = rand() % 199 - 99;
-
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	if (n > 0)
+	{
 		printf("%d is positive\n", n);
-	else if (n < 0)
-		printf("%d is negative\n", n);
-	else
+	}
+	else if (n == 0)
+	{
 		printf("%d is zero\n", n);
-
+	}
+	else
+	{
+		printf("%d is negative\n", n);
+	}
 	return (0);
 }
 
