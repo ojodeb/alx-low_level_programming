@@ -1,26 +1,43 @@
 #include "main.h"
 
 /**
- * print_diagonal - checks for digit
- * @n: number of \\ to be printed
- * Return: void
- */
-void print_diagonal(int n)
-{
-	int i = 0, ii;
 
-	while (i < n && n > 0)
-	{
-		ii = 0;
-		while (ii < i)
-		{
-			_putchar(' ');
-			ii++;
-		}
-		_putchar('\\');
-		_putchar('\n');
-		i++;
-	}
-	if (i == 0)
-		_putchar('\n');
-} c
+ * print_last_digit - prints the last digit of a number
+
+ * @n: the int to extract the last digit from
+
+ * Return: value of the last digit
+
+ */
+
+int print_last_digit(int n)
+
+{
+
+        int a;        
+
+
+        if (n < 0)
+
+                n = -n;
+
+
+        a = n % 10;
+
+                
+
+        if (a < 0)
+
+                a = -a;
+
+        
+
+        _putchar(a + '0');
+
+        
+
+        return (a);
+
+                
+
+}
