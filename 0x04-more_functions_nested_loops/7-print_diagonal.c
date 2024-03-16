@@ -42,11 +42,5 @@ void print_diagonal(int n)
 /**
  * main - Entry point
  *
- * Return: Always 0
- */
-int main(void)
-{
-	print_diagonal(5);
-	return (0);
-}
+ *
 
