@@ -1,43 +1,52 @@
-#include <main.h>
+#include <stdio.h>
 
 /**
-
- * print_last_digit - prints the last digit of a number
-
- * @n: the int to extract the last digit from
-
- * Return: value of the last digit
-
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int print_last_digit(int n)
-
+void _putchar(char c)
 {
-
-        int a;        
-
-
-        if (n < 0)
-
-                n = -n;
-
-
-        a = n % 10;
-
-                
-
-        if (a < 0)
-
-                a = -a;
-
-        
-
-        _putchar(a + '0');
-
-        
-
-        return (a);
-
-                
-
+	putchar(c);
 }
+
+/**
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of times the character \ should be printed
+ *
+ * Description: If n is 0 or less, only prints a newline
+ */
+void print_diagonal(int n)
+{
+	int i, j;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < i; j++)
+		{
+			_putchar(' ');
+		}
+		_putchar('\\');
+		_putchar('\n');
+	}
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	print_diagonal(5);
+	return (0);
+}
+
