@@ -1,2 +1,1 @@
-this is a readme for  0x09-static_libraries work
-
+This is a  0x09-static_libraries readme
