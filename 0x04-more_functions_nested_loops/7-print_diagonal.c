@@ -1,46 +1,28 @@
-#include <stdio.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-void _putchar(char c)
-{
-	putchar(c);
-}
+#include "main.h"
 
 /**
  * print_diagonal - draws a diagonal line on the terminal
  * @n: number of times the character \ should be printed
- *
- * Description: If n is 0 or less, only prints a newline
  */
 void print_diagonal(int n)
 {
-	int i, j;
-
 	if (n <= 0)
 	{
 		_putchar('\n');
-		return;
-	}
-
-	for (i = 0; i < n; i++)
+	} else
 	{
-		for (j = 0; j < i; j++)
+		int i, j;
+
+		for (i = 0; i < n; i++)
 		{
-			_putchar(' ');
+			for (j = 0; j < n; j++)
+			{
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
+			}
+			_putchar('\n');
 		}
-		_putchar('\\');
-		_putchar('\n');
 	}
 }
-
-/**
- * main - Entry point
- *
- *
-
